@@ -43,6 +43,8 @@
     <Compile Include="Infrastructure\Notification.cs" />
     <Compile Include="EventArguments\ErrorEventArgs.cs" />
     <Compile Include="GlobalEventsManager.cs" />
+    <Compile Include="Legacy\ErrorEventArgs.cs" />
+    <Compile Include="Legacy\ErrorSystemClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Infrastructure\EventBase.cs" />
     <Compile Include="Infrastructure\Warning.cs" />
