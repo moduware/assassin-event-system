@@ -6,7 +6,7 @@ namespace AssassinEventSystem.Legacy
     /// Class with support of error reporting system 
     /// (for comman errors, not exceptions)
     /// </summary>
-    public class ErrorSystemClass
+    public class ErrorClass
     {
         #region METHODS
         /// <summary>
