@@ -42,7 +42,7 @@
     <Compile Include="Infrastructure\Information.cs" />
     <Compile Include="Infrastructure\Notification.cs" />
     <Compile Include="EventArguments\ErrorEventArgs.cs" />
-    <Compile Include="GlobalEventsManager.cs" />
+    <Compile Include="Assassin.cs" />
     <Compile Include="Legacy\ErrorEventArgs.cs" />
     <Compile Include="Legacy\ErrorClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

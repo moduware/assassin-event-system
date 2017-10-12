@@ -9,7 +9,7 @@ namespace AssassinEventSystem
     /// using the the RaiseError method and also you can subscribe for errors, warnings, and notification events 
     /// to handle them 
     /// </summary>
-    public static class GlobalEventsManager
+    public static class Assassin
     {
         //public delegate void BadErrorHappenedHandler(ErrorEventArgs args);
 
