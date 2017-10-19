@@ -18,10 +18,10 @@ namespace AssassinEventSystem.Tests
             Message = string.Empty;
             HasException = false;
 
-            GlobalEventsManager.OnError += OnError;
-            GlobalEventsManager.OnNotification += OnNotification;
-            GlobalEventsManager.OnWarning += OnWarning;
-            //GlobalEventsManager.OnBadErrorHappened += OnBadError;
+            Assassin.OnError += OnError;
+            Assassin.OnNotification += OnNotification;
+            Assassin.OnWarning += OnWarning;
+            //Assassin.OnBadErrorHappened += OnBadError;
         }
 
         //private void OnBadError(ErrorEventArgs args)

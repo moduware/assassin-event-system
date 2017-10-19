@@ -9,17 +9,17 @@ namespace AssassinEventSystem.Tests
 
         public void RaiseError(string message)
         {
-            GlobalEventsManager.RaiseError(new TestModuleError(message));
+            Assassin.RaiseError(new TestModuleError(message));
         }
 
         public void RaiseWarning(string message)
         {
-            GlobalEventsManager.RaiseWarning(new TestModuleWarning(message));
+            Assassin.RaiseWarning(new TestModuleWarning(message));
         }
 
         public void RaiseNotification(string message)
         {
-            GlobalEventsManager.RaiseNotification(new TestModuleNotification(message));
+            Assassin.RaiseNotification(new TestModuleNotification(message));
         }
 
         #endregion
@@ -29,21 +29,21 @@ namespace AssassinEventSystem.Tests
         public void RaiseTestModuleErrorWithNullReferenceException(string message)
         {
             var ex = new NullReferenceException(message);
-            GlobalEventsManager.RaiseError(new TestModuleError(ex.Message, ex));
+            Assassin.RaiseError(new TestModuleError(ex.Message, ex));
             throw ex;
         }
 
         public void RaiseTestModuleWarningWithNullReferenceException(string message)
         {
             var ex = new NullReferenceException(message);
-            GlobalEventsManager.RaiseWarning(new TestModuleWarning(ex.Message, ex));
+            Assassin.RaiseWarning(new TestModuleWarning(ex.Message, ex));
             throw ex;
         }
 
         public void RaiseTestModuleNotificationWithNullReferenceException(string message)
         {
             var ex = new NullReferenceException(message);
-            GlobalEventsManager.RaiseNotification(new TestModuleNotification(message, ex));
+            Assassin.RaiseNotification(new TestModuleNotification(message, ex));
             throw ex;
         }
 
@@ -54,7 +54,7 @@ namespace AssassinEventSystem.Tests
         public void RaiseTestModuleErrorWithArgumentNullException(string message)
         {
             var ex = new ArgumentNullException("", message);
-            GlobalEventsManager.RaiseError(new TestModuleError(ex.Message, ex));
+            Assassin.RaiseError(new TestModuleError(ex.Message, ex));
             throw ex;
         }
 
@@ -63,21 +63,21 @@ namespace AssassinEventSystem.Tests
         public void RaiseTestModuleErrorWithNullReferenceException2(string message)
         {
             var ex = new NullReferenceException(message);
-            GlobalEventsManager.RaiseError(new TestModuleError(ex));
+            Assassin.RaiseError(new TestModuleError(ex));
             throw ex;
         }
 
         public void RaiseTestModuleWarningWithNullReferenceException2(string message)
         {
             var ex = new NullReferenceException(message);
-            GlobalEventsManager.RaiseWarning(new TestModuleWarning(ex));
+            Assassin.RaiseWarning(new TestModuleWarning(ex));
             throw ex;
         }
 
         public void RaiseTestModuleNotificationWithNullReferenceException2(string message)
         {
             var ex = new NullReferenceException(message);
-            GlobalEventsManager.RaiseNotification(new TestModuleNotification(ex));
+            Assassin.RaiseNotification(new TestModuleNotification(ex));
             throw ex;
         }
 
