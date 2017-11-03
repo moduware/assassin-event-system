@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/moduware/assassin-event-system/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/moduware/assassin-event-system</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/moduware/assassin-event-system/master/nuget_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Simple event system without any platform or package dependencies, can be used as abstration layer.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>utility event logging</tags>
+  </metadata>
+</package>

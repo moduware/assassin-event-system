@@ -50,6 +50,8 @@
     <Compile Include="Infrastructure\EventBase.cs" />
     <Compile Include="Infrastructure\Warning.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="AssassinEventSystem.nuspec" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
