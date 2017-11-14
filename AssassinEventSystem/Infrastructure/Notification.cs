@@ -2,17 +2,17 @@
 
 namespace AssassinEventSystem.Infrastructure
 {
-    public abstract class Notification : EventBase
+    public  class Notification : EventBase
     {
-        protected Notification(string message) : base(message)
+        public Notification(string message) : base(message)
         {
         }
 
-        protected Notification(string message, Exception exception) : base(message, exception)
+        public Notification(string message, Exception exception) : base(message, exception)
         {
         }
 
-        protected Notification(Exception exception) : base(exception)
+        public Notification(Exception exception) : base(exception)
         {
         }
     }

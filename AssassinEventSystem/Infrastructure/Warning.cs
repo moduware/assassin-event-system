@@ -2,17 +2,17 @@
 
 namespace AssassinEventSystem.Infrastructure
 {
-    public abstract class Warning : EventBase
+    public  class Warning : EventBase
     {
-        protected Warning(string message) : base(message)
+        public Warning(string message) : base(message)
         {
         }
 
-        protected Warning(string message, Exception exception) : base(message, exception)
+        public Warning(string message, Exception exception) : base(message, exception)
         {
         }
 
-        protected Warning(Exception exception) : base(exception)
+        public Warning(Exception exception) : base(exception)
         {
         }
     }

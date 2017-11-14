@@ -11,15 +11,6 @@ namespace AssassinEventSystem
     /// </summary>
     public static class Assassin
     {
-        //public delegate void BadErrorHappenedHandler(ErrorEventArgs args);
-
-        //public static event BadErrorHappenedHandler OnBadErrorHappened;
-
-        //public static void RaiseBadError<T>(T error) where T : Error
-        //{
-        //    OnBadErrorHappened?.Invoke(new ErrorEventArgs(error));
-        //}
-
         /// <summary>
         /// Occurs when [on error].
         /// </summary>
@@ -50,6 +41,11 @@ namespace AssassinEventSystem
             Error(null, new ErrorEventArgs(error));
         }
 
+        public static void RaiseError(string error) 
+        {
+            Error(null, new ErrorEventArgs(new Error(error)));
+        }
+
         /// <summary>
         /// Raises the warning.
         /// </summary>
@@ -59,6 +55,11 @@ namespace AssassinEventSystem
             Warning(null, new WarningEventArgs(warning));
         }
 
+        public static void RaiseWarning(string warning) 
+        {
+            Warning(null, new WarningEventArgs(new Warning(warning)));
+        }
+
         /// <summary>
         /// Raises the notification.
         /// </summary>
@@ -66,6 +67,11 @@ namespace AssassinEventSystem
         public static void RaiseNotification<T>(T notification) where T: Notification
         {
             Notification(null, new NotificationEventArgs(notification));
+        }
+
+        public static void RaiseNotification(string notification) 
+        {
+            Notification(null, new NotificationEventArgs(new Notification(notification)));
         }
 
         /// <summary>
@@ -78,7 +84,10 @@ namespace AssassinEventSystem
             Information(null, new InformationEventArgs(information));
         }
 
-
+        public static void RaiseInformation(string information)
+        {
+            Information(null, new InformationEventArgs(new Information(information)));
+        }
 
     }
 }
