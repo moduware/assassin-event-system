@@ -31,28 +31,9 @@ namespace AssassinEventSystem
         /// </summary>
         public static event EventHandler<InformationEventArgs> Information = delegate { };
 
-        /// <summary>
-        /// Raises the error.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="error">The error.</param>
-        public static void RaiseError<T>(T error) where T : Error
-        {
-            Error(null, new ErrorEventArgs(error));
-        }
-
         public static void RaiseError(string error) 
         {
             Error(null, new ErrorEventArgs(new Error(error)));
-        }
-
-        /// <summary>
-        /// Raises the warning.
-        /// </summary>
-        /// <param name="warning">The warning.</param>
-        public static void RaiseWarning<T>(T warning) where T: Warning
-        {
-            Warning(null, new WarningEventArgs(warning));
         }
 
         public static void RaiseWarning(string warning) 
@@ -60,28 +41,9 @@ namespace AssassinEventSystem
             Warning(null, new WarningEventArgs(new Warning(warning)));
         }
 
-        /// <summary>
-        /// Raises the notification.
-        /// </summary>
-        /// <param name="notification">The notification.</param>
-        public static void RaiseNotification<T>(T notification) where T: Notification
-        {
-            Notification(null, new NotificationEventArgs(notification));
-        }
-
         public static void RaiseNotification(string notification) 
         {
             Notification(null, new NotificationEventArgs(new Notification(notification)));
-        }
-
-        /// <summary>
-        /// Raises the information.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="information">The information.</param>
-        public static void RaiseInformation<T>(T information) where T : Information
-        {
-            Information(null, new InformationEventArgs(information));
         }
 
         public static void RaiseInformation(string information)
