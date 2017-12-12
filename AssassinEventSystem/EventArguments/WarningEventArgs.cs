@@ -1,15 +1,15 @@
 using System;
-using AssassinEventSystem.Infrastructure;
 
 namespace AssassinEventSystem.EventArguments
 {
     public class WarningEventArgs : EventArgs
     {
-        public Warning Warning { get; set; }
+        //public Warning Warning { get; set; }
+        public string Message { get; set; }
 
-        public WarningEventArgs(Warning warning)
+        public WarningEventArgs(string warning)
         {
-            Warning = warning;
+            Message = warning;
         }
     }
 }

@@ -1,15 +1,15 @@
 ﻿using System;
-using AssassinEventSystem.Infrastructure;
 
 namespace AssassinEventSystem.EventArguments
 {
     public class InformationEventArgs : EventArgs
     {
-        public Information Information { get; set; }
+        //public Information Information { get; set; }
+        public string Message { get; set; }
 
-        public InformationEventArgs(Information information)
+        public InformationEventArgs(string information)
         {
-            Information = information;
+            Message = information;
         }
     }
 }

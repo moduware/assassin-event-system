@@ -1,6 +1,5 @@
-﻿using System;
-using AssassinEventSystem.EventArguments;
-using AssassinEventSystem.Infrastructure;
+﻿using AssassinEventSystem.EventArguments;
+using System;
 
 namespace AssassinEventSystem
 {
@@ -33,22 +32,22 @@ namespace AssassinEventSystem
 
         public static void RaiseError(string error) 
         {
-            Error(null, new ErrorEventArgs(new Error(error)));
+            Error(null, new ErrorEventArgs(error));
         }
 
         public static void RaiseWarning(string warning) 
         {
-            Warning(null, new WarningEventArgs(new Warning(warning)));
+            Warning(null, new WarningEventArgs(warning));
         }
 
         public static void RaiseNotification(string notification) 
         {
-            Notification(null, new NotificationEventArgs(new Notification(notification)));
+            Notification(null, new NotificationEventArgs(notification));
         }
 
         public static void RaiseInformation(string information)
         {
-            Information(null, new InformationEventArgs(new Information(information)));
+            Information(null, new InformationEventArgs(information));
         }
 
     }
