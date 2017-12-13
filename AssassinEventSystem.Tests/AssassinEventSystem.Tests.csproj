@@ -43,13 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ErrorManagerTest.cs" />
+    <Compile Include="AssassinTest.cs" />
     <Compile Include="EventPublisherClass.cs" />
     <Compile Include="EventHandlerClass.cs" />
-    <Compile Include="TestsErrors\TestModuleWarning.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestsErrors\TestModuleError.cs" />
-    <Compile Include="TestsErrors\TestModuleNotification.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AssassinEventSystem\AssassinEventSystem.csproj">
