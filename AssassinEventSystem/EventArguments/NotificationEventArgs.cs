@@ -1,15 +1,14 @@
 using System;
-using AssassinEventSystem.Infrastructure;
 
 namespace AssassinEventSystem.EventArguments
 {
     public class NotificationEventArgs : EventArgs
     {
-        public Notification Notification { get; set; }
+        public string Message { get; set; }
 
-        public NotificationEventArgs(Notification notification)
+        public NotificationEventArgs(string notification)
         {
-            Notification = notification;
+            Message = notification;
         }
     }
 }

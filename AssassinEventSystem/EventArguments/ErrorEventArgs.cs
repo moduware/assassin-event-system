@@ -1,15 +1,14 @@
 ﻿using System;
-using AssassinEventSystem.Infrastructure;
 
 namespace AssassinEventSystem.EventArguments
 {
     public class ErrorEventArgs : EventArgs
     {
-        public Error Error { get; set; }
+        public string Message { get; set; }
 
-        public ErrorEventArgs(Error error)
+        public ErrorEventArgs(string error)
         {
-            Error = error;
+            Message = error;
         }
     }
 }

@@ -1,6 +1,5 @@
-﻿using System;
-using AssassinEventSystem.EventArguments;
-using AssassinEventSystem.Infrastructure;
+﻿using AssassinEventSystem.EventArguments;
+using System;
 
 namespace AssassinEventSystem.Tests
 {
@@ -9,60 +8,30 @@ namespace AssassinEventSystem.Tests
         public string Message;
         public bool HasException;
         public Exception Exception;
-        public Error Error { get; set; }
-        public Warning Warning { get; set; }
-        public Notification Notification { get; set; }
 
         public EventHandlerClass()
         {
             Message = string.Empty;
             HasException = false;
 
-            Assassin.OnError += OnError;
-            Assassin.OnNotification += OnNotification;
-            Assassin.OnWarning += OnWarning;
-            //Assassin.OnBadErrorHappened += OnBadError;
+            Assassin.Error += OnError;
+            Assassin.Notification += OnNotification;
+            Assassin.Warning += OnWarning;
         }
-
-        //private void OnBadError(ErrorEventArgs args)
-        //{
-        //    Message = "Bad error here";
-        //}
 
         private void OnWarning(object sender, WarningEventArgs e)
         {
-            Message = e.Warning.Message;
-            Warning = e.Warning;
-
-            if (e.Warning.Exception != null)
-            {
-                HasException = true;
-                Exception = e.Warning.Exception;
-            }
+            Message = e.Message;
         }
 
         private void OnNotification(object sender, NotificationEventArgs e)
         {
-            Message = e.Notification.Message;
-            Notification = e.Notification;
-
-            if (e.Notification.Exception != null)
-            {
-                HasException = true;
-                Exception = e.Notification.Exception;
-            }
+            Message = e.Message;
         }
 
         private void OnError(object sender, ErrorEventArgs e)
         {
-            Message = e.Error.Message;
-            Error = e.Error;
-
-            if (e.Error.Exception != null)
-            {
-                HasException = true;
-                Exception = e.Error.Exception;
-            }
+            Message = e.Message;
         }
     }
 }
